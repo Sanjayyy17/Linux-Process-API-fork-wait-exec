@@ -24,45 +24,31 @@ Test the C Program for the desired output.
 # PROGRAM:
 
 ## C Program to print process ID and parent Process ID using Linux API system calls
-
-```
+```c
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
 int main(void)
-{	      
-	       pid_t process_id;
-	    
-	       pid_t p_process_id;
-	      
-         process_id = getpid();
-	      
-	       p_process_id = getppid();
-	     
-
-
-	      printf("The process id: %d\n",process_id);
-	      printf("The process id of parent function: %d\n",p_process_id);
-	      return 0; }
+{	//variable to store calling function's process id
+	pid_t process_id;
+	//variable to store parent function's process id
+	pid_t p_process_id;
+	//getpid() - will return process id of calling function
+	process_id = getpid();
+	//getppid() - will return process id of parent function
+	p_process_id = getppid();
+	printf("The process id: %d\n",process_id);
+	printf("The process id of parent function: %d\n",p_process_id);
+	return 0; }
 ```
 ## OUTPUT
-![image](https://github.com/AasrithSairam/Linux-Process-API-fork-wait-exec/assets/139331438/99369ba7-8352-4f96-bf14-f3836f4c0beb)
 
-
-
-
-
-
-
-
-
-
-
+![ID and Parrent](https://github.com/Aakashraj04/Linux-Process-API-fork-wait-exec-/assets/121117266/c4b360a5-d4f2-4290-914f-64f17f16c105)
 
 
 
 ## C Program to create new process using Linux API system calls fork() and exit()
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -85,32 +71,16 @@ int main() {
     }
     return 0;
 }
+
 ```
-
-
-
-
-
-
-
-
-
-
-
-
 ## OUTPUT
-![image](https://github.com/AasrithSairam/Linux-Process-API-fork-wait-exec/assets/139331438/7c09627e-26ee-488f-9ed4-c378cb253364)
 
-
-
-
-
+![fort and exit](https://github.com/Aakashraj04/Linux-Process-API-fork-wait-exec-/assets/121117266/e3f3cb94-05c3-4e20-abe3-8d9d67826265)
 
 
 
 ## C Program to execute Linux system commands using Linux API system calls exec() family
-
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -139,48 +109,8 @@ int main() {
     return 0;
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## OUTPUT
-![image](https://github.com/AasrithSairam/Linux-Process-API-fork-wait-exec/assets/139331438/5f1fec90-e91c-495c-98f9-426abc8f3eb5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![exec](https://github.com/Aakashraj04/Linux-Process-API-fork-wait-exec-/assets/121117266/33a2ae89-7e9d-478e-b9ad-1b6d4363d1ce)
 
 
 # RESULT:
